@@ -3,7 +3,7 @@ provider "hcloud" {
 }
 
 locals {
-  ssh_keys = concat([hcloud_ssh_key.this.id], var.ssh_keys)
+  ssh_keys = concat([hcloud_ssh_key.this[0].id], var.ssh_keys)
 }
 
 resource "hcloud_server" "this" {
@@ -22,7 +22,6 @@ resource "hcloud_server" "this" {
   }
   public_net {
     ipv4_enabled = var.ipv4_enabled
-    ipv4         = hcloud_primary_ip.this.id
     ipv6_enabled = var.ipv6_enabled
   }
 
@@ -47,9 +46,6 @@ resource "hcloud_firewall" "this" {
     }
   }
   labels = var.tags
-  depends_on = [
-    hcloud_server.this
-  ]
 }
 
 resource "hcloud_snapshot" "this" {
@@ -77,15 +73,6 @@ resource "hcloud_floating_ip" "this" {
   depends_on = [
     hcloud_server.this
   ]
-}
-
-resource "hcloud_primary_ip" "this" {
-  name          = "${var.server_name}-${var.server_location}-primary-ip"
-  datacenter    = var.server_location
-  type          = "ipv4"
-  assignee_type = "server"
-  auto_delete   = true
-  labels        = var.tags
 }
 
 resource "hcloud_rdns" "this" {
