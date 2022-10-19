@@ -12,6 +12,7 @@ resource "hcloud_server" "this" {
   image             = var.os_image
   location          = var.server_location
   backups           = var.enable_backups
+  user_data         = var.user_data
   delete_protection = var.delete_protection
   ssh_keys          = local.ssh_keys
   firewall_ids      = [hcloud_firewall.this.id]

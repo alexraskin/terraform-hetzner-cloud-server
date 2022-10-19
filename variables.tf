@@ -136,3 +136,9 @@ variable "delete_protection" {
   description = "Enable delete protection"
   default     = false
 }
+
+variable "user_data" {
+  type        = string
+  description = "User data"
+  default     = null
+}

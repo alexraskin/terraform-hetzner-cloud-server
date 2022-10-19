@@ -107,6 +107,7 @@ No modules.
 | <a name="input_subnet_ip_range"></a> [subnet\_ip\_range](#input\_subnet\_ip\_range) | IP range of the subnet | `string` | `"10.0.1.0/24"` | no |
 | <a name="input_subnet_type"></a> [subnet\_type](#input\_subnet\_type) | Type of the subnet | `string` | `"cloud"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | Tags for resources | `map(string)` | `{}` | no |
+| <a name="input_user_data"></a> [user\_data](#input\_user\_data) | User data | `string` | `null` | no |
 
 ## Outputs
 
