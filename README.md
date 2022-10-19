@@ -72,7 +72,6 @@ No modules.
 | [hcloud_floating_ip.this](https://registry.terraform.io/providers/hetznercloud/hcloud/1.35.2/docs/resources/floating_ip) | resource |
 | [hcloud_network.this](https://registry.terraform.io/providers/hetznercloud/hcloud/1.35.2/docs/resources/network) | resource |
 | [hcloud_network_subnet.this](https://registry.terraform.io/providers/hetznercloud/hcloud/1.35.2/docs/resources/network_subnet) | resource |
-| [hcloud_primary_ip.this](https://registry.terraform.io/providers/hetznercloud/hcloud/1.35.2/docs/resources/primary_ip) | resource |
 | [hcloud_rdns.this](https://registry.terraform.io/providers/hetznercloud/hcloud/1.35.2/docs/resources/rdns) | resource |
 | [hcloud_server.this](https://registry.terraform.io/providers/hetznercloud/hcloud/1.35.2/docs/resources/server) | resource |
 | [hcloud_snapshot.this](https://registry.terraform.io/providers/hetznercloud/hcloud/1.35.2/docs/resources/snapshot) | resource |
@@ -85,7 +84,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_create_ssh_key"></a> [create\_ssh\_key](#input\_create\_ssh\_key) | Create SSH key | `bool` | `null` | no |
+| <a name="input_create_ssh_key"></a> [create\_ssh\_key](#input\_create\_ssh\_key) | Create SSH key | `bool` | `true` | no |
 | <a name="input_delete_protection"></a> [delete\_protection](#input\_delete\_protection) | Enable delete protection | `bool` | `false` | no |
 | <a name="input_enable_backups"></a> [enable\_backups](#input\_enable\_backups) | Enable backups | `bool` | `false` | no |
 | <a name="input_enable_floating_ip"></a> [enable\_floating\_ip](#input\_enable\_floating\_ip) | Enable floating IP | `bool` | `null` | no |
@@ -113,6 +112,7 @@ No modules.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_floating_ip"></a> [floating\_ip](#output\_floating\_ip) | The floating IP of the Hetzner server |
 | <a name="output_public_key"></a> [public\_key](#output\_public\_key) | The public key of the Hetzner server |
 | <a name="output_server_ip4_address"></a> [server\_ip4\_address](#output\_server\_ip4\_address) | The IPv4 address of the Hetzner server |
 | <a name="output_server_status"></a> [server\_status](#output\_server\_status) | The status of the Hetzner server |
