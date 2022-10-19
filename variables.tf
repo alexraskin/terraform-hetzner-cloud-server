@@ -104,7 +104,7 @@ variable "enable_floating_ip" {
 variable "create_ssh_key" {
   type        = bool
   description = "Create SSH key"
-  default     = null
+  default     = true
 }
 
 variable "enable_snapshot" {

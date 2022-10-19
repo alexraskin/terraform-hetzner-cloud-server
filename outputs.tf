@@ -9,11 +9,11 @@ output "server_status" {
 }
 
 output "public_key" {
-  value       = var.create_ssh_key ? tls_private_key.this.public_key : null
+  value       = var.create_ssh_key ? tls_private_key.this[0].public_key_openssh : null
   description = "The public key of the Hetzner server"
 }
 
-out "floating_ip" {
-  value       = var.enable_floating_ip ? hcloud_floating_ip.this.ip : null
+output "floating_ip" {
+  value       = var.enable_floating_ip ? hcloud_floating_ip.this[0].ip_address : null
   description = "The floating IP of the Hetzner server"
 }
