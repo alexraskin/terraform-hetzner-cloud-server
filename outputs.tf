@@ -17,3 +17,8 @@ output "floating_ip" {
   value       = var.enable_floating_ip ? hcloud_floating_ip.this[0].ip_address : null
   description = "The floating IP of the Hetzner server"
 }
+
+output "private_key" {
+  value       = var.create_ssh_key ? tls_private_key.this[0].private_key_pem : null
+  description = "The private key of the Hetzner server"
+}

@@ -114,6 +114,7 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_floating_ip"></a> [floating\_ip](#output\_floating\_ip) | The floating IP of the Hetzner server |
+| <a name="output_private_key"></a> [private\_key](#output\_private\_key) | The private key of the Hetzner server |
 | <a name="output_public_key"></a> [public\_key](#output\_public\_key) | The public key of the Hetzner server |
 | <a name="output_server_ip4_address"></a> [server\_ip4\_address](#output\_server\_ip4\_address) | The IPv4 address of the Hetzner server |
 | <a name="output_server_status"></a> [server\_status](#output\_server\_status) | The status of the Hetzner server |
