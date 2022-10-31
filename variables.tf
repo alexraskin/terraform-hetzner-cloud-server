@@ -142,3 +142,9 @@ variable "user_data" {
   description = "User data"
   default     = null
 }
+
+variable "enable_snapshot" {
+  type        = bool
+  description = "Enable snapshot"
+  default     = false
+}

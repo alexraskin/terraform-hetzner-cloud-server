@@ -82,3 +82,8 @@ resource "hcloud_rdns" "this" {
   ip_address = hcloud_server.this.ipv4_address
   dns_ptr    = var.resverse_dns_name
 }
+
+resource "hcloud_snapshot" "this" {
+  count     = var.enable_snapshot ? 1 : 0
+  server_id = hcloud_server.this.id
+}
