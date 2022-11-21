@@ -3,7 +3,7 @@ provider "hcloud" {
 }
 
 locals {
-  ssh_keys = concat([hcloud_ssh_key.this[0].id], var.ssh_keys)
+  ssh_keys = "${concat(hcloud_ssh_key.this[*].id, var.ssh_keys)}"
 }
 
 resource "hcloud_server" "this" {
